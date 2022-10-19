@@ -30,22 +30,21 @@ class Person {
     isAlive() {
         console.log('true')
     }
-}
+};
 
 //Postal Worker class
 class PostalWorker extends Person {
     deliverMail() {
         console.log('Your mail has been delivered by', this.name)
     }
-}
+};
 
 //Chef class
 class Chef extends Person {
     cookMeal() {
         console.log(this.name,'has prepared your food')
     }
-
-}
+};
 
 //Postal Workers
 let steve = new PostalWorker('Steve', 'blue', 'black');
@@ -66,3 +65,20 @@ console.log(pepe.cookMeal());
 
 
 //Hungry for More
+class BankAccount {
+    constructor(ownerName, balance, acctNum){
+        this.ownerName = ownerName;
+        this.balance = balance;
+        this.acctNum = acctNum;
+    }
+    deposit() {
+
+    }
+    withdraw() {
+
+    }
+};
+
+class CheckingAccount extends BankAccount{
+    
+}
