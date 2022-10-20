@@ -64,21 +64,42 @@ console.log(pepe.cookMeal());
 
 
 
-//Hungry for More
+
+//Hungry for More - Bank Account
 class BankAccount {
     constructor(ownerName, balance, acctNum){
         this.ownerName = ownerName;
         this.balance = balance;
         this.acctNum = acctNum;
     }
-    deposit() {
-
+    deposit(d) {
+        this.balance = this.balance + d
+        console.log('You have deposited', d)
+        console.log('Your balance is now', this.balance)
     }
-    withdraw() {
+    withdraw(w) {
+        this.balance = this.balance - w
+        console.log('You have withdrawn', w)
+        if (this.balance < 0){
+            console.log('Your Checking Account has been overdrawn. Additional fees have been added to your account.')
+            console.log('Your balance is now', this.balance)
 
+        }
     }
 };
 
 class CheckingAccount extends BankAccount{
     
 }
+
+class SavingsAccount extends BankAccount{
+    
+}
+
+
+let luis = new BankAccount('Luis', 25 , '63456256');
+
+
+luis.deposit(10);
+luis.withdraw(40);
+
